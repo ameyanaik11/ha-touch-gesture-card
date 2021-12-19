@@ -28,7 +28,7 @@ import { localize } from './localize/localize';
 
 /* eslint no-console: 0 */
 console.info(
-  `%c  BOILERPLATE-CARD \n%c  ${localize('common.version')} ${CARD_VERSION}    `,
+  `%c  touch-gesture-card \n%c  ${localize('common.version')} ${CARD_VERSION}    `,
   'color: orange; font-weight: bold; background: black',
   'color: white; font-weight: bold; background: dimgray',
 );
@@ -36,16 +36,16 @@ console.info(
 // This puts your card into the UI card picker dialog
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
-  type: 'boilerplate-card',
-  name: 'Boilerplate Card',
-  description: 'A template custom card for you to create something awesome',
+  type: 'touch-gesture-card',
+  name: 'Touch Gesture Card',
+  description: 'Experimental - A custom card for to handle touch gestures',
 });
 
 // TODO Name your custom element
-@customElement('boilerplate-card')
+@customElement('touch-gesture-card')
 export class BoilerplateCard extends LitElement {
   public static async getConfigElement(): Promise<LovelaceCardEditor> {
-    return document.createElement('boilerplate-card-editor');
+    return document.createElement('touch-gesture-card-editor');
   }
 
   public static getStubConfig(): Record<string, unknown> {
